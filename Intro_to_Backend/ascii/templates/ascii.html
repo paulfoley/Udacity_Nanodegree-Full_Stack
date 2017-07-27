@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>/asccii/</h2>
+<form method='post'>
+	<label>
+		<div>title</div>
+		<input type='text' name='title' value="{{title}}">
+	</label>
+
+	<label>
+		<div>art</div>
+		<textarea name="art" value="{{art}}"></textarea>
+	</label>
+
+	<div class='error'>
+		{{error}}	
+	</div>
+	<input type='submit'>
+</form>
+
+<hr>
+
+{% for art in arts %}
+	<div class='art'>
+		<div class='art-title'>{{art.title}}</div>
+		<pre class='art-body'>{{art.art}}</pre>
+	</div>
+{% endfor %}
+
+
+{% endblock %}

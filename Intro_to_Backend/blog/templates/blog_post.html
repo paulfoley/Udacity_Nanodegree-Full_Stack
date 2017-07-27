@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="post">
+  		<div class="post-heading">
+    		<div class="post-title">
+      			{{blog.subject}}
+    		</div>
+    		<div class="post-date">
+      			{{blog.created.strftime("%b %d, %Y")}}
+    		</div>
+  		</div>
+  		<div class="post-content">
+    		{{blog.content}}
+  		</div>
+	</div>
+{% endblock %}
