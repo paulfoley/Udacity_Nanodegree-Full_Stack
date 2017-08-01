@@ -1,11 +1,11 @@
 # Project - Favorite Movies
 
-Shows off my favorite movies using a [Python](https://www.python.org/) script that generates a web page of my favorite movies.
+[Python](https://www.python.org/) scripts that generate a web page of my favorite movies.
 
 
 ## Project Overview
 
-In this project, [Python](https://www.python.org/) code is used to create a list of movies titles, along with their respective box art imagery and movie trailer website.  The [Python](https://www.python.org/) code then generates a static [HTML5](https://www.w3schools.com/html/html5_intro.asp) web page allowing visitors to browse the movies and watch the trailers.
+In this project, [Python](https://www.python.org/) code is used to create a list of movies titles, as well as their respective box art imagery and movie trailers. The [Python](https://www.python.org/) code then generates a static [HTML5](https://www.w3schools.com/html/html5_intro.asp) web page allowing a visitor to browse the movies and watch their trailers.
 
 
 ### Project Steps
