@@ -30,7 +30,7 @@ You'll need to install:
 
 `favorite_movies.py` - Main python script, contains the list of favorite movies and calls the open_movies_page function in the `fresh_tomatoes.py`.
 
-`fresh_tomatoes.py` - Module has a function called open_movies_page that takes in one argument, which is a list of movies, and creates an [HTML5](https://www.w3schools.com/html/html5_intro.asp) file which will display all of my favorite movies.
+`fresh_tomatoes.py` - Module has a function called `open_movies_page(movies)` that takes in one argument, which is a list of movies, and creates an [HTML5](https://www.w3schools.com/html/html5_intro.asp) file which will display all of my favorite movies.
 
 ### Running the script
 
