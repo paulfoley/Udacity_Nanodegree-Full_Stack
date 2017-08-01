@@ -1,9 +1,12 @@
+'''
+Script that builds bootstrap template to display favorite movies
+'''
+## Imports 
 import webbrowser
 import os
 import re
 
-
-# Styles and scripting for the page
+## Styles and Scripting for the Web Page
 main_page_head = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -85,8 +88,7 @@ main_page_head = '''
 </head>
 '''
 
-
-# The main page layout and title bar
+## The Main Page Layout and Title Bar
 main_page_content = '''
   <body>
     <!-- Trailer Video Modal -->
@@ -107,7 +109,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand" href="#">Paul's Favorite Movies</a>
           </div>
         </div>
       </div>
@@ -120,7 +122,7 @@ main_page_content = '''
 '''
 
 
-# A single movie entry html template
+## A Single Movie Entry HTML Template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
@@ -128,12 +130,12 @@ movie_tile_content = '''
 </div>
 '''
 
-
+## Functions for Adding in Movies
 def create_movie_tiles_content(movies):
-    # The HTML content for this section of the page
+    ### The HTML Content
     content = ''
     for movie in movies:
-        # Extract the youtube ID from the url
+        #### Extract the YouTube ID From the URL
         youtube_id_match = re.search(
             r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
         youtube_id_match = youtube_id_match or re.search(
@@ -141,27 +143,45 @@ def create_movie_tiles_content(movies):
         trailer_youtube_id = (youtube_id_match.group(0) if youtube_id_match
                               else None)
 
-        # Append the tile for the movie with its content filled in
+        #### Append the Tile for the Movie with its Content Filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
         )
+    
     return content
 
 
 def open_movies_page(movies):
-    # Create or overwrite the output file
+    ### Create or Overwrite The output File
     output_file = open('fresh_tomatoes.html', 'w')
 
-    # Replace the movie tiles placeholder generated content
+    ### Replace the Movie Tiles Placeholder Generated Content
     rendered_content = main_page_content.format(
         movie_tiles=create_movie_tiles_content(movies))
 
-    # Output the file
+    ### Output the File
     output_file.write(main_page_head + rendered_content)
     output_file.close()
 
-    # open the output file in the browser (in a new tab, if possible)
+    ### Open the Output File in the Browser (in a New Tab, if possible)
     url = os.path.abspath(output_file.name)
     webbrowser.open('file://' + url, new=2)
+
+## Movie Class
+class Movie():
+    ### Stores Movie Related Information
+    VALID_RATINGS = ['G', 'PG', 'PG-13', 'R']
+
+    def __init__(self, movie_title, movie_storyline,
+                 poster_image, trailer_youtube):
+        #### Initializes the Movie Class
+        self.title = movie_title
+        self.storyline = movie_storyline
+        self.poster_image_url = poster_image
+        self.trailer_youtube_url = trailer_youtube
+
+    def show_trailer(self):
+        #### Function Shows a Movie's Trailer
+        webbrowser.open(self.trailer_youtube_url)
