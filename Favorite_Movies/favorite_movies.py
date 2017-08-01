@@ -1,9 +1,9 @@
 # Creates a web page with Paul's favorite movies
 
-## Import from fresh_tomatoes
+# Import from fresh_tomatoes
 from fresh_tomatoes import open_movies_page, Movie
 
-## Favorite Movies
+# Favorite Movies
 moana = Movie('Moana', "A story of a girl that is out to save her village", 'https://images-na.ssl-images-amazon.com/images/M/MV5BMjI4MzU5NTExNF5BMl5BanBnXkFtZTgwNzY1MTEwMDI@._V1_UY1200_CR90,0,630,1200_AL_.jpg', 'https://www.youtube.com/watch?v=LKFuXETZUsI')  # noqa
 avengers = Movie('Avengers', "A story of Super Heros uniting to save the world", 'https://upload.wikimedia.org/wikipedia/en/f/f9/TheAvengers2012Poster.jpg', 'https://www.youtube.com/watch?v=eOrNdBpGMv8')  # noqa
 gladiator = Movie('Gladiator', 'A story of a gladiator out of revenge', 'https://images-na.ssl-images-amazon.com/images/M/MV5BMTgwMzQzNTQ1Ml5BMl5BanBnXkFtZTgwMDY2NTYxMTE@._V1_UY1200_CR90,0,630,1200_AL_.jpg', 'https://www.youtube.com/watch?v=owK1qxDselE')  # noqa
@@ -13,5 +13,5 @@ star_wars = Movie('Star Wars', 'A story of Jedi taking down the empire', 'https:
 
 movies = [moana, avengers, gladiator, dragon, panda, star_wars]
 
-## Display Movies
+# Display Movies
 open_movies_page(movies)
