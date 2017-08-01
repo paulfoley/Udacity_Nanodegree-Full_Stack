@@ -8,9 +8,9 @@ The [Udacity Full Stack Nanodegree](https://www.udacity.com/course/full-stack-we
 Full stack web developers are the go-to experts that companies rely on to build, support, and maintain their web applications. They're responsible for the following:
 
 * Understanding how the web works.
-* Developing complex relational databases used to persistently store an applications data.
+* Developing complex relational databases to persistently store an applications data.
 * Building complete web applications using [Python](https://www.python.org/), [HTML5](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/html/html_css.asp), [JavaScript](https://www.w3schools.com/js/default.asp), and [SQL](https://www.w3schools.com/sql/default.asp).
-* Securing and configure [Linux](https://www.linux.org/)-based servers.
+* Securing and configuring [Linux](https://www.linux.org/)-based servers.
 * Scaling web applications to support hundreds of thousands of users.
 
 The projects found in this [GitHub Repository](https://github.com/paulfoley/Udacity_Nanodegree-Full_Stack) will clearly demonstrate mastery of key skills in full stack web development.
