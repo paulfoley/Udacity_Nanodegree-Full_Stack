@@ -19,11 +19,11 @@ The projects found in this [GitHub Repository](https://github.com/paulfoley/Udac
 
 The following topics are covered in order:
 
-* Programming Fundamentals
-* Developers' Tools
-* Backend: Databases & Applications
-* Fontend: JavaScript & AJAX
-* Deployment: Linux Servers
+1. Programming Fundamentals
+2. Developers' Tools
+3. Backend: Databases & Applications
+4. Fontend: JavaScript & AJAX
+5. Deployment: Linux Servers
 
 ### Certificate of Completion
 
