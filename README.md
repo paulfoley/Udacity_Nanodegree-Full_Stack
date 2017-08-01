@@ -38,7 +38,7 @@ The following topics are covered in order:
 
 ## Projects
 
-Applications and scripts that s
+Complex server-side web applications that use powerful relational databases to persistently store data, can support any front-end, and scale to support hundreds of thousands of users.
 
 ### Table of Contents
 
