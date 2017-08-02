@@ -1,36 +1,38 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Paul Foley's Personal Profile Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet"></head>
+  <head>
+    <meta charset="utf-8">
+    <title>Paul Foley's Personal Profile Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+  </head>
   <body>
-
-    <div class="main-nav">
-        <ul class="nav">
-          <li class="name">Paul Foley</li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="http://paulnicholasfoley.com/">Experience</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Paul_Foley_(entrepreneur)">Wikipedia Page</a></li>
-        </ul>
-    </div>
+    <nav>
+      <a href='http://paulnicholasfoley.com/' class="name" target="_blank">
+        Paul Foley
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Paul_Foley_(entrepreneur)" target="_blank">
+        Wikipedia Page
+        </a>
+    </nav>
 
     <header>
-      <img src="images/me.png" alt="Avatar of Paul Foley" class="profile-image">
+      <img src="img/me.png" alt="Avatar of Paul Foley" class="profile-image">
       <h1 class="tag name">Hello, I’m Paul.</h1>
       <p class="tag location">My home is Denver, CO.</p>
     </header>
 
     <main class="flex">
-      <div class="card">
-        <h2>Background</h2>
-        <p>Paul Foley loves computer vision, natural language processing, and starting companies</p>
-        <p>Paul's from Louisville, CO, went to school at University of Michigan, has worked for Deloitte, Belly, Nimbus, and started an ad-tech company Augur</p>
-      </div> 
 
-      <div class="card">
+      <article>
+        <h2>Background</h2>
+        <img src='img/model.jpg' alt='Pauls model shot' class="profile-image">
+        <p>Paul Foley loves machine learning, cryptocurrencies, and starting companies</p>
+        <p>Paul's from Louisville, CO, went to school at University of Michigan, has worked for Deloitte, Belly, Nimbus, and started an ad-tech company Augur.</p>
+      </article> 
+
+      <article>
         <h2>Goals</h2>
         <p>Paul wants to be able to build amazing applications that change the world.</p>
         <ul class="skills">
@@ -41,11 +43,11 @@
           <li>SQL</li>
         </ul>
         <p>I’d like to work for Apple, Alphabet, Facebook, Microsoft, or Amazon. Or start my own company.</p>
-      </div> 
+      </article>
 
-      <div class="card">
+      <article>
         <h2>Hobbies</h2>
-        <p>Here's what Paul does for fun in his free time</p>
+        <p>Here's what Paul does for fun in his free time:</p>
         <ul class="skills">
           <li>Pool Parties</li>
           <li>Salsa Dancing</li>
@@ -54,21 +56,18 @@
           <li>Coffee Meeting</li>
         </ul>
         <p>If you'd like to do any of these things with Paul please email him me@paulnicholasfoley.com</p>
-      </div> 
-
-      <div class="card">
-        <h2>Model Shot</h2>
-        <img src='images/model.jpg' alt='Pauls model shot' class="profile-image">
-      </div> 
+      </article> 
 
     </main>
     <footer>
       <ul>
-        <li><a href="https://twitter.com/PaulFoleyTweets" class="social twitter">Twitter</a></li>
+        <li>
+          <a href="https://www.facebook.com/paulnicholasfoley" class="social facebook">Facebook</a>
+        </li>
         <li><a href="https://www.linkedin.com/in/paulfoleylinkedin" class="social linkedin">LinkedIn</a></li>
         <li><a href="https://github.com/paulfoley" class="social github">Github</a></li>
       </ul>
       <p class="copyright">Copyright 2017, Paul Foley</p>
     </footer>
   </body>
-  </html>
+</html>
