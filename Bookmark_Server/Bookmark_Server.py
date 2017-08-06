@@ -44,6 +44,7 @@
 import http.server
 import requests
 from urllib.parse import unquote, parse_qs
+import os
 
 memory = {}
 
@@ -140,6 +141,7 @@ class Shortener(http.server.BaseHTTPRequestHandler):
             self.wfile.write("Couldn't fetch URI'{}'. Sorry!".format(longuri).encode())
 
 if __name__ == '__main__':
-    server_address = ('', 8000)
+    port = (os.environ.get('PORT', 8000))
+    server_address = ('', port)
     httpd = http.server.HTTPServer(server_address, Shortener)
     httpd.serve_forever()

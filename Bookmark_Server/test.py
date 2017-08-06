@@ -15,7 +15,7 @@ import requests, random, socket
 def test_CheckURI_bad():
     '''The CheckURI code should return False for a bad URI.'''
     print("Testing CheckURI function for a bad URI.")
-    from BookmarkServer import CheckURI
+    from Bookmark_Server import CheckURI
     try:
         bad = CheckURI("this is a bad uri")
     except NotImplementedError:
@@ -33,7 +33,7 @@ def test_CheckURI_bad():
 def test_CheckURI_good():
     '''The CheckURI code should return True for a good URI.'''
     print("Testing CheckURI function for a good URI.")
-    from BookmarkServer import CheckURI
+    from Bookmark_Server import CheckURI
     try:
         good = CheckURI("https://www.google.com/")
     except NotImplementedError:
