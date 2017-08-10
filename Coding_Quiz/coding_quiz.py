@@ -48,7 +48,11 @@ and Machine __4__ (ML).
 """}
 
 # Answers
-answers = {'easy':['World','python','print','html'],'medium':['function','arguments','None','list'],'hard':['Intelligence','Vision','Language','Learning']}
+answers = {
+            'easy':['World','python','print','html'],
+            'medium':['function','arguments','None','list'],
+            'hard':['Intelligence','Vision','Language','Learning']
+            }
 
 choices = []
 
@@ -129,7 +133,5 @@ def quiz():
         print(wrong_level)
         return quiz()
 
-#-----------------#
-#-Running Program-#
-#-----------------#
+# Start Quiz
 print(quiz())
