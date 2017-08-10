@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ASCII ART</title>
+	</head>
+
+	<style type='text/css'>
+		body {
+			font-family: sans-serif;
+			width: 800px;
+			margin: 0 auto;
+			padding: 10px;
+		}
+
+		.error {
+			color: red;
+		}
+
+		label {
+			display: block;
+			font-size: 20px;
+		}
+
+		input[type=text] {
+			width: 400px;
+			font-size: 20px;
+		}
+
+		textarea {
+			width: 400px;
+			height: 200px;
+			font-size: 17px;
+			font-family: monospace;
+		}
+
+		input[type=sumbit] {
+			font-size:24px;
+		}
+
+		hr {
+			margin: 20px auto;
+		}
+
+		.art + .art {
+			margin-top: 20px;
+		}
+
+		.art-title {
+			margin: 0;
+			font-size: 17px;
+		}
+	</style>
+
+	<body style='margin: 0'>
+		<h1 style='background-color: #ddd; color: #888; margin: 0 height: 50px'>
+			ASCII ART
+		</h1>
+
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>
