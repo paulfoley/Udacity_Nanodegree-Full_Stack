@@ -19,7 +19,7 @@ You'll need to install:
 
 ### Files
 
-* `blog.py` - [Python](https://www.python.org/) script that creates functionality to input and display [ASCII](http://www.asciitable.com/) art.
+* `blog.py` - [Python](https://www.python.org/) script that creates functionality to create and display a blog.
 * `app.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
 * `templates` - [HTML5](https://www.w3schools.com/html/) files that display the blog.
 * `css` - [CSS](https://www.w3schools.com/html/html_css.asp) files for styling.
@@ -33,13 +33,13 @@ The instructions below assume [Google App Engine](https://cloud.google.com/appen
 
 ### Run the Application Locally
 
-To run the application using the local development server, we'll use `dev_appserver.py` which is included with the [Google Cloud SDK](https://cloud.google.com/sdk/docs/). From within the directory where `app.yaml` configuration file is located, start the local development server with the following command:
+To run the application using the local development server, we'll use `dev_appserver.py` which is included with the [Google Cloud SDK](https://cloud.google.com/sdk/docs/). From within the directory where the `app.yaml` configuration file is located, start the local development server with the following command:
 
 `dev_appserver.py .`
 
-The local development server is now running and listening for requests on port 8080. Visit `http://localhost:8080/` in your web browser to view the app.
+The local development server is now running and listening for requests on port 8080. Visit `http://localhost:8080/` in a web browser to view the app.
 
-The development server can be running while modifying application. The development server watches for changes in your source files and reloads them if necessary.
+The development server can be running while modifying the application. The development server watches for changes in the source files and reloads them if necessary.
 
 ### Deploy the Application
 
@@ -49,7 +49,7 @@ To deploy the application to [Google App Engine](https://cloud.google.com/appeng
 
 ### View the Application
 
-Launch the browser and view the app at `http://[YOUR_PROJECT_ID].appspot.com`, by runing the following command:
+To launch the browser and view the app at `http://[YOUR_PROJECT_ID].appspot.com`, run the following command:
 
 `gcloud app browse`
 
