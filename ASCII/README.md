@@ -19,16 +19,16 @@ You'll need to install:
 
 ### Files
 
-`ascii.py` - [Python](https://www.python.org/) script that creates functionality to input and display [ASCII](http://www.asciitable.com/) art.
-`app.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
-`templates` - [HTML5](https://www.w3schools.com/html/) files that display the blog.
+* `ascii.py` - [Python](https://www.python.org/) script that creates functionality to input and display [ASCII](http://www.asciitable.com/) art.
+* `app.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
+* `templates` - [HTML5](https://www.w3schools.com/html/) files that display the blog.
 
 
 ## Running the Application
 
-To run this application you'll will need to use [Google App Engine](https://cloud.google.com/appengine/). You can find setup instructions at [Quickstart with Google App Engine](https://cloud.google.com/appengine/docs/standard/python/quickstart).
+This application uses [Google App Engine](https://cloud.google.com/appengine/) to run. Setup instructions can be found at [Quickstart with Google App Engine](https://cloud.google.com/appengine/docs/standard/python/quickstart).
 
-The instructions below assume you have [Google App Engine](https://cloud.google.com/appengine/docs/standard/python/quickstart) setup.
+The instructions below assume [Google App Engine](https://cloud.google.com/appengine/docs/standard/python/quickstart) is setup.
 
 ### Run the Application Locally
 
@@ -38,7 +38,7 @@ To run the application using the local development server, we'll use `dev_appser
 
 The local development server is now running and listening for requests on port 8080. Visit `http://localhost:8080/` in your web browser to view the app.
 
-The development server can berunning while modifying application. The development server watches for changes in your source files and reloads them if necessary.
+The development server can be running while modifying application. The development server watches for changes in your source files and reloads them if necessary.
 
 ### Deploy the Application
 
@@ -48,7 +48,7 @@ To deploy the application to [Google App Engine](https://cloud.google.com/appeng
 
 ### View the Application
 
-To launch the browser and view the app at http://[YOUR_PROJECT_ID].appspot.com, run the following command:
+Launch the browser and view the app at `http://[YOUR_PROJECT_ID].appspot.com`, by runing the following command:
 
 `gcloud app browse`
 
