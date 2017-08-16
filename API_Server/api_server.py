@@ -1,25 +1,36 @@
-#THIS IS A WEBSERVER FOR DEMONSTRATING THE TYPES OF RESPONSES WE SEE FROM AN API ENDPOINT
+"""
+THIS IS A WEBSERVER 
+FOR DEMONSTRATING THE TYPES OF RESPONSES
+FROM AN API ENDPOINT
+"""
+
+# Import Flask
 from flask import Flask
+
 app = Flask(__name__)
 
-#GET REQUEST
-
-@app.route('/readHello/')
+# GET REQUEST
+@app.route('/readHello/', methods = ['GET'])
 def getRequestHello():
+	
 	return "Hi, I got your GET Request!"
 
-#POST REQUEST
+# POST REQUEST
 @app.route('/createHello/', methods = ['POST'])
 def postRequestHello():
+	
 	return "I see you sent a POST message :-)"
-#UPDATE REQUEST
+
+# UPDATE REQUEST
 @app.route('/updateHello/', methods = ['PUT'])
 def updateRequestHello():
+	
 	return "Sending Hello on an PUT request!"
 
-#DELETE REQUEST
+# DELETE REQUEST
 @app.route('/deleteHello/', methods = ['DELETE'])
 def deleteRequestHello():
+	
 	return "Deleting your hard drive.....haha just kidding! I received a DELETE request!"
 
 if __name__ == '__main__':
