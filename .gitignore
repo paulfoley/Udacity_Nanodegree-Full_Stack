@@ -2,6 +2,7 @@ Logs_Analysis/vagrant/Logs_Analysis/newsdata.sql
 Favorite_Movies/__pycache__/
 Bookmark_Server/__pycache__/
 Forum/.vagrant
+Catalog/.vagrant
 API_Server/.vagrant
 Blog/blog.pyc
 ASCII/ascii.pyc
