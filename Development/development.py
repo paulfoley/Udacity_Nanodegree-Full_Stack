@@ -10,14 +10,29 @@ connection = psycopg2.connect(database="development", user="postgres", password=
 cursor = connection.cursor()
 
 # Query
-query = "INSERT INTO Coders (CoderId, Name) VALUES(1, 'Paul Foley');"
+query = "INSERT INTO Coders (id, name, email, me@paulnicholasfoley.com) VALUES(1, 'Paul Foley');"
 cursor.execute(query)
 
 # Commit to the Database
 connection.commit()
 
 # Query
-query = "SELECT Name FROM Coders LIMIT 10;"
+query = "INSERT INTO Programs (id, name, coders_id) VALUES(1, 'Best App Ever', 1);"
+cursor.execute(query)
+
+# Commit to the Database
+connection.commit()
+
+# Query
+query = "INSERT INTO Bugs (id, name, description, program_id, coders_id) VALUES(1, 'A Bad Bad Bug', 1, 1);"
+cursor.execute(query)
+
+# Commit to the Database
+connection.commit()
+
+
+# Query
+query = "SELECT * FROM Bugs LIMIT 10;"
 cursor.execute(query)
 results = cursor.fetchall() #Can also .fetchone()
 
