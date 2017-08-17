@@ -5,8 +5,8 @@ import time
 import psycopg2
 
 # Define Functions
-def GetAllPosts():
-  ## Get posts from database.
+def get_all_posts():
+  '''Get posts from database.'''
 
   # Connect to Database and create Cursor
   connection = psycopg2.connect('dbname=forum')
@@ -25,8 +25,8 @@ def GetAllPosts():
   #Return the "posts" dictionary
   return posts
 
-def AddPost(content):
-  ## Add a post to the database.
+def add_post(content):
+  '''Add a post to the database.'''
 
   # Connect to Database and create Cursor
   connection = psycopg2.connect('dbname=forum')

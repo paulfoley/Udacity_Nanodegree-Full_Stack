@@ -1,8 +1,8 @@
 ## Forum - a buggy web forum server backed by a good database
 
 # Imports
-import forumdb # The forumdb module is where the database interface code goes.
-import cgi
+from forumdb import get_all_posts, add_post
+from cgi import parse_qs
 from wsgiref.simple_server import make_server
 from wsgiref import util
 import bleach
@@ -47,7 +47,7 @@ def View(env, resp):
     It displays the submission form and the previously posted messages.
     '''
     # get posts from database
-    posts = forumdb.GetAllPosts()
+    posts = get_all_posts()
     # send results
     headers = [('Content-type', 'text/html')]
     resp('200 OK', headers)
@@ -66,14 +66,14 @@ def Post(env, resp):
     # If length is zero, post is empty - don't save it.
     if length > 0:
         postdata = input.read(length)
-        fields = cgi.parse_qs(postdata)
+        fields = parse_qs(postdata)
         content = fields['content'][0]
         # If the post is just whitespace, don't save it.
         content = content.strip()
         if content:
             clean_content = bleach.clean(content)
             # Save it in the database
-            forumdb.AddPost(clean_content)
+            add_post(clean_content)
     # 302 redirect back to the main page
     headers = [('Location', '/'),
                ('Content-type', 'text/plain')]
