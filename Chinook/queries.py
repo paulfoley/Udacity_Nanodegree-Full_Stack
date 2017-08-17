@@ -1,4 +1,4 @@
-# Queries Using SQLite3
+# Example of SQL using SQLite3
 
 # Import Database
 import sqlite3
