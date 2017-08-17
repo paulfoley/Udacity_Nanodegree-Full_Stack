@@ -1,4 +1,7 @@
-how_many_snakes = 1
+# Draws a "Python"
+
+# How Many Snakes?
+how_many_snakes = 3
 
 snake_string = """
 Welcome to Python3!
@@ -10,7 +13,6 @@ Welcome to Python3!
    __________/ /
 -=:___________/
 
-<3, Philip and Charlie
 """
 
 
