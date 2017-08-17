@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-#
 # Test script for the Cookie server.
 #
 # The server should be listening on port 8000, answer a GET request with
