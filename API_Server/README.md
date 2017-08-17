@@ -1,4 +1,4 @@
-# Project - ASCII Art
+# Project - API Server
 
 [API](https://en.wikipedia.org/wiki/Application_programming_interface)'s are an integral part of web applications.
 
