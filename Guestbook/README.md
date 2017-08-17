@@ -1,4 +1,4 @@
-# Guestbook
+# Project - Guestbook
 
 Guestbook is an example application showing basic usage of Google App
 Engine. Users can read & write text messages and optionally log-in with
