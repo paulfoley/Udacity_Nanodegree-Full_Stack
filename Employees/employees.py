@@ -1,27 +1,41 @@
+'''Creates an Employee with an Address'''
 
-## Imports 
-import os
-import sys
-from sqlalchemy import Column, ForeignKey, Integer, String, create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+# Imports
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from database_setup import Base, Employee, Address
 
-Base = declarative_base()
+engine = create_engine('sqlite:///employees.db')
+Base.metadata.bind = engine
 
-class Employee(Base):
-	__tablename__ = 'employee'
-	
-	name = Column(String(250), nullable = False)
-	id = Column(Integer, primary_key = True)
+DBSession = sessionmaker(bind = engine)
+session = DBSession()
 
-class Address(Base):
-	__tablename__ = 'address'
+# Create Employee
+rebeccaEmployee = Employee(name = "Rebecca Allen")
+session.add(rebeccaEmployee)
+session.commit()
 
-	street = Column(String(80), nullable = False)
-	zip = Column(String(5), nullable = False)
-	id = Column(Integer, primary_key = True)
-	employee_id = Column(Integer, ForeignKey('employee.id'))
-	employee = relationship(Employee)
+# Create Employee
+rebeccaAddress = Address(street = "512 Sycamore Road", zip = "02001", employee = rebeccaEmployee)
+session.add(rebeccaAddress)
+session.commit()
 
-engine = create_engine('sqlite:///employeeData.db')
-Base.metadata.create_all(engine)
+# Read
+employees = session.query(Employee).all()
+for employee in employees:
+	print(employee.name)
+
+# Update
+rebecca = session.query(Employee).filter_by(name = "Rebecca Allen").one()
+address = session.query(Address).filter_by(employee_id = rebecca.id).one()
+address.street = "281 Summer Circle"
+address.zip = "00189"
+session.add(address)
+session.commit()
+
+# Read
+addresses = session.query(Address).all()
+for address in addresses:
+	print(address.street)
+	print(address.zip)

@@ -2,6 +2,8 @@ Logs_Analysis/newsdata.sql
 Logs_Analysis/ubuntu-xenial-16.04-cloudimg-console.log
 Favorite_Movies/__pycache__/
 Bookmark_Server/__pycache__/
+Employees/__pycache__/
+Employees/employees.db
 Forum/.vagrant/
 Catalog/.vagrant/
 API_Server/.vagrant/
@@ -11,3 +13,4 @@ Tournament/.vagrant/
 Bug_Management/.vagrant/
 Blog/blog.pyc
 ASCII/ascii.pyc
+
