@@ -1,5 +1,4 @@
-## Example of INSERT using psycopg2
-#!/usr/bin/python
+# Example of Setting up a Postgres database using Psycopg2
 
 # Import Database
 import psycopg2
@@ -17,5 +16,14 @@ cursor.execute(query)
 # Commit to the Database
 connection.commit()
 
+# Query
+query = "SELECT Name FROM Coders LIMIT 10;"
+cursor.execute(query)
+results = cursor.fetchall() #Can also .fetchone()
+
+# Print Results
+print(results)
+
 # Close the Connection - Note: ALWAYS CLOSE THE CONNECTION
 connection.close()
+
