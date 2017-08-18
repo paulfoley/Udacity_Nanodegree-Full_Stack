@@ -1,11 +1,12 @@
-#!/usr/bin/env python3
-#
-# Test script for the Messageboard Part Three server.
-#
-# The server should be listening on port 8000, answer a GET request with
-# an HTML document, and answer a POST request with a redirect to the
-# main page.
+'''
+Test script for the Messageboard
 
+The server should be listening on port 8000, 
+answer a GET request with an HTML document, 
+and answer a POST request with a redirect to the main page.
+'''
+
+# Import Modules
 import requests, random, socket
 
 def test_connect():

@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-#
-# Step two in building the messageboard server.
-#
-# Instructions:
-#   1. In the do_POST method, send a 303 redirect back to the / page.
-#   2. In the do_GET method, put the response together and send it.
+'''Message Board Built From Scrtatch'''
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import parse_qs
@@ -26,11 +20,12 @@ form = '''<!DOCTYPE html>
 
 class MessageHandler(BaseHTTPRequestHandler):
     def do_POST(self):
-        # How long was the message?
+        # Message Length
         length = int(self.headers.get('Content-length', 0))
 
         # Read the correct amount of data from the request.
         data = self.rfile.read(length).decode()
+
         # Extract the "message" field from the request data.
         message = parse_qs(data)["message"][0]
 
@@ -40,7 +35,7 @@ class MessageHandler(BaseHTTPRequestHandler):
         # Store it in memory.
         memory.append(message)
 
-        # 1. Send a 303 redirect back to the root page.
+        # Send a 303 redirect back to the root page.
         self.send_response(303) # Redirect Via Get
         self.send_header('Location', '/')
         self.end_headers()
@@ -53,10 +48,10 @@ class MessageHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html; charset=utf-8')
         self.end_headers()
 
-        # 2. Put the response together out of the form and the stored messages.
+        # Put the response together out of the form and the stored messages.
         mesg = form.format("\n".join(memory))
 
-        # 3. Send the response.
+        # Send the response.
         self.wfile.write(mesg.encode())
 
 if __name__ == '__main__':
