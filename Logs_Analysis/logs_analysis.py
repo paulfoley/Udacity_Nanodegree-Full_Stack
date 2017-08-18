@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 """
 Queries to determine:
 1) Most Popular articles
@@ -9,7 +7,6 @@ Queries to determine:
 
 # Import database
 import psycopg2
-
 
 # Functions
 def connect():
@@ -29,7 +26,11 @@ def popular_articles():
     # Returns the top 3 most popular articles
     connection, cursor = connect()
 
-    query = "SELECT * FROM log_count LIMIT 3"
+    query = """
+            SELECT * 
+            FROM log_count
+            LIMIT 3;
+            """
     cursor.execute(query)
     article_count = cursor.fetchall()
     connection.close()
@@ -41,10 +42,11 @@ def popular_authors():
     # Returns a list of the most popular authors
     connection, cursor = connect()
 
-    query = """SELECT authors.name as name, author_count.total AS total
-                FROM authors, author_count
-                WHERE authors.id = author_count.author_id
-                ORDER BY total DESC;"""
+    query = """
+            SELECT authors.name as name, author_count.total AS total
+            FROM authors, author_count
+            WHERE authors.id = author_count.author_id
+            ORDER BY total DESC;"""
     cursor.execute(query)
     authors = cursor.fetchall()
     connection.close()
@@ -56,14 +58,17 @@ def error_days():
     # Reports Days that have more then 1% errors
     connection, cursor = connect()
 
-    query = """SELECT log_dates.day AS day,
-                CAST(errors.total AS FLOAT) /
-                CAST(log_dates.total AS FLOAT) AS percent
-                FROM log_dates, errors WHERE log_dates.day = errors.day
-                GROUP BY log_dates.day, errors.total, log_dates.total
-                HAVING CAST(errors.total AS FLOAT) /
-                CAST(log_dates.total AS FLOAT) >= .01
-                ORDER BY day ASC;"""
+    query = """
+            SELECT log_dates.day AS day,
+            CAST(errors.total AS FLOAT) /
+            CAST(log_dates.total AS FLOAT) AS percent
+            FROM log_dates, errors WHERE log_dates.day = errors.day
+            GROUP BY log_dates.day, errors.total, log_dates.total
+            HAVING CAST(errors.total AS FLOAT) /
+            CAST(log_dates.total AS FLOAT) >= .01
+            ORDER BY day ASC;
+            """
+    
     cursor.execute(query)
     errors = cursor.fetchall()
     connection.close()

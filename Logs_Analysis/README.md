@@ -1,31 +1,80 @@
-Project returns 1) The most popular articles 2) The most popular authors and 3) Shows days on which there were more then 1% load errors.
+# Project - Logs Analysis
 
-To get started, follow these instructions:
+Analyzing log data is common to improve web app performance as well as a security measure to find bugs, hacks, and other issues that can bring down your web application.
 
-A) Create the database with the articles, authors, and log tables:
-	- Navigate to the folder with the "newsdata.sql" files
-	- Type "psql -d news -f newsdata.sql" into the command line 
+## Project Overview
 
-B) Create the necessary views for the log_analysis.py script to work:
-	- Enter "psql news" in the terminal
-	- Then copy and paste the following SQL commands below:
+In this project, we will use log data to answer some questions:
 
--- SQL Commands
--- Creates a View 'log_count' 
-DROP VIEW IF EXISTS log_count;
-CREATE VIEW log_count AS SELECT log.path as article_path, count(log.path) as total FROM log, articles WHERE log.path = '/article/' || articles.slug GROUP BY log.path ORDER BY total DESC;
+1) What the most popular articles visitors are reading?
+2) Who are the most popular authors on our site?
+3) Which days there were more then 1% load errors?
 
--- Creates a View 'author_count'
-DROP VIEW IF EXISTS author_count;
-CREATE VIEW author_count AS SELECT articles.author as author_id, sum(log_count.total) as total FROM log_count, articles WHERE log_count.article_path = '/article/' || articles.slug GROUP BY articles.author;
 
--- Creates a View 'errors'
-DROP VIEW IF EXISTS errors;
-CREATE VIEW errors AS SELECT date_trunc('day', time) as day, COUNT(status) as total FROM log WHERE status = '404 NOT FOUND' GROUP BY day ORDER BY day ASC;
+## Getting Started
 
--- Creates a View 'log_dates'
-DROP VIEW IF EXISTS log_dates;
-CREATE VIEW log_dates AS SELECT date_trunc('day', time) as day, COUNT(status) as total FROM log GROUP BY day ORDER BY day ASC;
+### Prerequisites
+You'll need to install:
 
-C) Run the script!
-	- In the command line enter "python log_analysis.py"
+* [Python 3.6](https://www.python.org/)
+* [Vagrant](https://www.vagrantup.com/downloads.html)
+* [Virtual Box](https://www.virtualbox.org/)
+
+### Files
+
+* `logs_analysis.py` - [Python](https://www.python.org/) script that creates the forum.
+* `database_setup.sql` - [SQL](https://www.w3schools.com/sql/default.asp) commands to create the database as well as create the necessary tables.
+* `views.sql` - [SQL](https://www.w3schools.com/sql/default.asp) commands to create the views that will be used in the log analysis.
+* `Vagrantfile` - A [Vagrant](https://www.vagrantup.com/downloads.html) file to setup the virtual environment.
+
+
+## Running the Application
+
+This application uses [Vagrant](https://www.vagrantup.com/downloads.html) and [Virtual Box](https://www.virtualbox.org/) to create a virtual environment. We will need both of these programs to run the script. Download and setup instructions can be found on their various sites.
+
+The instructions below assume that both [Vagrant](https://www.vagrantup.com/downloads.html) and [Virtual Box](https://www.virtualbox.org/) are installed.
+
+### Run the Application
+
+To run the application we'll first need to spin up the virtual environment. Navigate to the folder containing the `Vagrantfile` in your terminal, and run the command:
+
+`vagrant up`
+
+If this is your first time running the command the virtual environment will begin setup, this can take some time. Once the virtual environment is setup, run the command:
+
+`vagrant ssh`
+
+This will log you into the virtual environment. Navigate to the folder that contains the `newsdata.sql` file:
+
+`cd /vagrant`
+
+To setup the database, follow these instructions:
+
+* Create the `news` database with the `articles`, `authors`, and `log` tables, as well as the neccessary views:
+	- Type `psql -d news -a -f newsdata.sql` into the command line 
+	- Type `psql -d news -a -f views.sql` into the command line
+
+* Run the script!
+	- In the command line enter `python logs_analysis.py`
+
+The queries should run and output the answer to the questions we had above.
+
+
+## Authors
+
+* **[Paul Foley](https://github.com/paulfoley)**
+* [Udacity](https://www.udacity.com/)
+
+
+## License
+
+* <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+	<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+</a>
+
+
+## Acknowledgments
+
+* [Udacity](https://www.udacity.com/)
