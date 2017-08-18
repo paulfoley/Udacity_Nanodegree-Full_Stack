@@ -4,6 +4,7 @@ Favorite_Movies/__pycache__/
 Bookmark_Server/__pycache__/
 Employees/__pycache__/
 Links/__pycache__/
+Links/link.db
 Employees/employees.db
 Forum/.vagrant/
 Catalog/.vagrant/
