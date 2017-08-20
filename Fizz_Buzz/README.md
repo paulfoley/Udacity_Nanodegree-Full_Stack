@@ -21,7 +21,8 @@ You'll need to install:
 
 * `fizz_buzz.py` - [Python](https://www.python.org/) script that returns to the us the correct answers for the game [Fizz Buzz](https://en.wikipedia.org/wiki/Fizz_buzz).
 * `app.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
-* `templates` - [HTML5](https://www.w3schools.com/html/) files that display the blog.
+* `templates` - [HTML5](https://www.w3schools.com/html/) files that display the application.
+* `stylesheets` - [CSS](hhttps://www.w3schools.com/css/default.asp) files that style the application.
 
 
 ## Running the Application
