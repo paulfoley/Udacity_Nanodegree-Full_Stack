@@ -6,6 +6,10 @@ handlers:
 - url: /.*
   script: travel.app
 
+- url: /stylesheets
+  static_dir: stylesheets
+
+
 libraries:
 - name: jinja2
   version: latest
