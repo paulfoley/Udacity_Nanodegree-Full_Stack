@@ -44,6 +44,13 @@ body {
     transform: rotate(0deg);
 }
 
+h1 {
+    background-color: #ddd;
+    color: #888;
+    margin: 0;
+    height: 50px;
+}
+
 h2 {
     margin: 0;
     transform: rotate(-45deg);
