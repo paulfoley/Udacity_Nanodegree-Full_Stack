@@ -22,7 +22,9 @@ You'll need to install:
 * `blog.py` - [Python](https://www.python.org/) script that creates functionality to create and display a blog.
 * `app.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
 * `templates` - [HTML5](https://www.w3schools.com/html/) files that display the blog.
-* `css` - [CSS](https://www.w3schools.com/html/html_css.asp) files for styling.
+* `stylesheets` - [CSS](https://www.w3schools.com/html/html_css.asp) files for styling.
+* `img` - Images for blog.
+
 
 
 ## Running the Application

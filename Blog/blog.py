@@ -26,8 +26,14 @@ class Handler(webapp2.RequestHandler):
 # Front Page of the Blog
 class Front(Handler):
 	def get(self):
-		blogs = db.GqlQuery("SELECT * FROM Blog ORDER BY created DESC LIMIT 10")
-		self.render('blog_front.html', blogs = blogs)
+		query = """
+				SELECT *
+				FROM Blog
+				ORDER BY created DESC
+				LIMIT 10;
+				"""
+		blogs = db.GqlQuery(query)
+		self.render('index.html', blogs = blogs)
 
 # Viewing an Individual Blog Post
 class Blog_Post(Handler):
@@ -65,7 +71,7 @@ class Blog(db.Model):
 
 	def render(self):
 		self._render_text = self.content.replace('\n', '<br>')
-		return render_str('blog_post.html', blog = self)
+		return render_str('index.html', blog = self)
 
 # Running the Web Application
-app = webapp2.WSGIApplication([('/?',Front),('/newpost', New_Post),('/([0-9]+)', Blog_Post)], debug = True)
+app = webapp2.WSGIApplication([('/?', Front),('/newpost', New_Post),('/([0-9]+)', Blog_Post)], debug = True)
