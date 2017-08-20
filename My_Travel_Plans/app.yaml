@@ -3,11 +3,12 @@ api_version: 1
 threadsafe: true
 
 handlers:
+- url: /stylesheets
+  static_dir: stylesheets
 - url: /.*
   script: travel.app
 
-- url: /stylesheets
-  static_dir: stylesheets
+
 
 
 libraries:
