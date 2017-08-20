@@ -22,6 +22,7 @@ You'll need to install:
 * `ascii.py` - [Python](https://www.python.org/) script that creates functionality to input and display [ASCII](http://www.asciitable.com/) art.
 * `app.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
 * `templates` - [HTML5](https://www.w3schools.com/html/) files that display the blog.
+* `stylesheets` - [CSS](https://www.w3schools.com/css/default.asp) files that style the application.
 
 
 ## Running the Application
