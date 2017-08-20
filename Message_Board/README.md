@@ -1,7 +1,6 @@
 # Project - Message Board
 
-One of the most common methods of web applications is GET and POST.
-
+Message boards are common on the web.
 
 ## Project Overview
 
