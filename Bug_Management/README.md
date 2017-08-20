@@ -4,7 +4,7 @@ Finding and fixing bugs in applications is one of the main responsibilities of w
 
 ## Project Overview
 
-In this project, we will create a simple application that creates a bug tracker.
+In this project, we will create a simple database that can track bugs.
 
 
 ## Getting Started
