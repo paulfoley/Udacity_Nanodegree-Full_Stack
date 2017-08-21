@@ -1,20 +1,22 @@
-from urllib.request import urlopen
+from urllib.request import urlopen, Request
 
 def read_text():
-	quotes = open('text.txt')
-	contents_of_file = quotes.read()
-	print(contents_of_file)
-	quotes.close()
+	with open('text.txt', 'r') as file:
+		contents_of_file = file.read()
+	
 	return check_profanity(contents_of_file)
 
 def check_profanity(text_to_check):
-	with urlopen('http://www.wdylike.appspot.com/?q=' + text_to_check) as url:
-		output = url.read()
-	if 'true' in output:
-		return ('Profanity Alert!!')
-	elif 'false' in output:
-		return ('This document has no curse words!')
-	else:
-		return ('Could not scan the document properly.')
+	text_list = text_to_check.split()
+	for text in text_list:
+		print(text)
+		url = 'http://www.wdylike.appspot.com/?q=' + text
+		with urlopen(url) as file:
+			output = file.read().decode("utf-8")
+			
+			if 'true' in output:
+				return ('Profanity Alert!!')
+	
+	return ('This document has no curse words!')
 
 print(read_text())
