@@ -1,0 +1,17 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /img
+  static_dir: img
+- url: /js
+  static_dir: js
+- url: /stylesheets
+  static_dir: stylesheets
+- url: /.*
+  script: compass.app
+
+libraries:
+- name: jinja2
+  version: latest

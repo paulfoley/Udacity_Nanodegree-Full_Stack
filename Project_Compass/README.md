@@ -1,32 +1,79 @@
-#Project Description: Reverse Engineering Project Compass
+# Project - Project Compass
 
-<img src="http://i.imgur.com/YAcMsgI.png?1">
-
-In this project, you’ll be taking apart the Project Compass web app. You will examine the features of Project Compass and identify who (**front end, back end, mobile, or data analyst**) would contribute towards each component of the web app. You will provide explanations for your answers to show your understanding of these four roles within programming.
-
-## What is Reverse Engineering?
-Engineering is the science of  inventing, designing, and building. Reverse engineering is the process of taking apart what has already been built to better understand how the things work. We will reverse engineer Project Compass by isolating each feature to evaluate what type of programmer was involved in creating it.
-
-## Live Version:
-<a href="http://www.project-compass.appspot.com/">Project Compass Web App</a>
+Maps are one of the most commonly used applications on the web.
 
 
-##Directions:
-1. Download the following p4-project-compass.zip. Unzip the file in a folder you can easily access.
+## Project Overview
 
-2. Open index.html in your browser to view the web app on your local computer. To do this, click “File” in your browser window, click “Open File…”, navigate to the project folder containing ‘index.html’, and select it. Click the “Reverse Engineering Project Link.” You should see the following page on your browser.
-
-<img src="http://i.imgur.com/MBb2cmO.png?1">
-
-3. Open ‘answers.html’ in your text editor and add your responses in the student answer section between the <p> tags. Be sure to include an answer and explanation for each question.
-
-4. Save answers.html and create a zip file for answers.html and upload it.
-
-##Rubric:
+In this project, we will use the [Google Maps API](https://developers.google.com/maps/web/) to build a web application that shows a map of the northern California. We'll deploy and host our application using [Google App Engine](https://cloud.google.com/appengine/).
 
 
-## Optional Fun:
+## Getting Started
 
-1. Explore the index.html and style.css and change the front end features of the Project Compass app (font, images, links etc.)
+### Prerequisites
+You'll need to install:
 
-2. Open the main.js file. Change the Snazzy Map style or the starting location of the Google Map API.
+* [Python 2.7](https://www.python.org/)
+* [Google Cloud SDK](https://cloud.google.com/sdk/docs/)
+* [Jinja2](http://jinja.pocoo.org/)
+
+### Files
+
+* `compass.py` - [Python](https://www.python.org/) script that displays an output.
+* `app.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
+* `templates` - [HTML5](https://www.w3schools.com/html/) files that display the application.
+* `stylesheets` - [CSS](https://www.w3schools.com/css/default.asp) files to style the application.
+* `js` - [JavaScript](https://www.w3schools.com/js/default.asp) files that show the map.
+* `img` - Image files for the application.
+
+
+
+## Running the Application
+
+This application uses [Google App Engine](https://cloud.google.com/appengine/) to run. Setup instructions can be found at [Quickstart with Google App Engine](https://cloud.google.com/appengine/docs/standard/python/quickstart).
+
+The instructions below assume [Google App Engine](https://cloud.google.com/appengine/docs/standard/python/quickstart) is setup.
+
+### Run the Application Locally
+
+To run the application using the local development server, we'll use `dev_appserver.py` which is included with the [Google Cloud SDK](https://cloud.google.com/sdk/docs/). From within the directory where the `app.yaml` configuration file is located, start the local development server with the following command:
+
+`dev_appserver.py .`
+
+The local development server is now running and listening for requests on port 8080. Visit `http://localhost:8080/` in a web browser to view the app.
+
+The development server can be running while modifying the application. The development server watches for changes in the source files and reloads them if necessary.
+
+### Deploy the Application
+
+To deploy the application to [Google App Engine](https://cloud.google.com/appengine/), run the following command from within the root directory where the `app.yaml` file is located:
+
+`gcloud app deploy`
+
+### View the Application
+
+To launch the browser and view the app at `http://[YOUR_PROJECT_ID].appspot.com`, run the following command:
+
+`gcloud app browse`
+
+The app should now be displayed in the browser!
+
+
+## Authors
+
+* **[Paul Foley](https://github.com/paulfoley)**
+* [Udacity](https://www.udacity.com/)
+
+
+## License
+
+* <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+	<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+</a>
+
+
+## Acknowledgments
+
+* [Google Maps API](https://developers.google.com/maps/web/)
