@@ -1,12 +1,11 @@
 # Project - Personal Website
 
-One of the best ways to get found for opportunities is to have a personal website, where you can show off your skills and accomplishments.
-
+One of the best ways to get found for business opportunities is to have a personal website, where you can show off your skills and accomplishments.
 
 
 ## Project Overview
 
-In this project, we will use [Google App Engine](https://cloud.google.com/appengine/) to build a personal website using [HTML5](https://www.w3schools.com/html/html5_intro.asp) and [CSS](https://www.w3schools.com/css/default.asp). The site will be responsive and will display images, personal descriptions, and links to other sites on the web. 
+In this project, we will build a responsive personal website to display photos, biography, skills, and links to other personal sites on the web. We will deploy and host our website using [Google App Engine](https://cloud.google.com/appengine/).
 
 
 ## Getting Started
@@ -20,9 +19,11 @@ You'll need to install:
 
 ### Files
 
-* `hello.py` - [Python](https://www.python.org/) script that displays an output.
+* `personal.py` - [Python](https://www.python.org/) script that creates the website.
 * `app.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
-* `templates` - [HTML5](https://www.w3schools.com/html/) files that display the blog.
+* `templates` - [HTML5](https://www.w3schools.com/html/) files that display the website.
+* `stylesheets` - [CSS](https://www.w3schools.com/css/default.asp) files that style the website.
+* `img` - Image files for the website.
 
 
 ## Running the Application

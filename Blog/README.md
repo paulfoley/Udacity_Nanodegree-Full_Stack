@@ -5,7 +5,7 @@
 
 ## Project Overview
 
-In this project, we will use [Google App Engine](https://cloud.google.com/appengine/) to create a simple blog that allows a user to enter a title and blog post, store the post, and display the blog.
+In this project, we will create a simple blog that allows a user to enter a subject and blog post, store the post, and display the blog. We'll deploy and host our blog using use [Google App Engine](https://cloud.google.com/appengine/).
 
 
 ## Getting Started
