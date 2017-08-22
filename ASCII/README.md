@@ -1,11 +1,11 @@
 # Project - ASCII Art
 
-[ASCII](http://www.asciitable.com/) Art is an amazing invention from the developer community, where developers can make cool designs by using common keyboard characters.
+[ASCII](http://www.asciitable.com/) Art is an amazing invention from the developer community, where developers can make cool designs by using common keyboard characters!
 
 
 ## Project Overview
 
-In this project, we will use [Google App Engine](https://cloud.google.com/appengine/) to create a simple blog that takes in [ASCII](http://www.asciitable.com/) Art and displays it in a forum.
+In this project, we will create a simple blog that takes in [ASCII](http://www.asciitable.com/) Art and display the art in a forum. We will use [Google App Engine](https://cloud.google.com/appengine/) to deploy and host our application.
 
 
 ## Getting Started
