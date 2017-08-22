@@ -19,6 +19,6 @@ class Handler(webapp2.RequestHandler):
 class ShoppingList(Handler):
     def get(self):
     	items = self.request.get_all('food')
-    	self.render("shopping_list.html", items = items)
+    	self.render("index.html", items = items)
 
 app = webapp2.WSGIApplication([('/', ShoppingList)], debug=True)
