@@ -1,11 +1,11 @@
-# Project - Search
+# Project - Shopping List
 
-Some of the most used web appliations are search related.
+Task management is a common use case of web applications.
 
 
 ## Project Overview
 
-In this project, we will build a search web application that takes a users parameters, inputs them into [Google](https://www.google.com/), and returns the page results. We will deploy and host our website using [Google App Engine](https://cloud.google.com/appengine/).
+In this project, we will build a shopping list that a user can enter items and then the items show up on their shopping list. We will deploy and host our website using [Google App Engine](https://cloud.google.com/appengine/).
 
 
 ## Getting Started
@@ -19,11 +19,10 @@ You'll need to install:
 
 ### Files
 
-* `personal.py` - [Python](https://www.python.org/) script that creates the website.
+* `shopping_list.py` - [Python](https://www.python.org/) script that creates a shopping list.
 * `app.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
 * `templates` - [HTML5](https://www.w3schools.com/html/) files that display the website.
 * `stylesheets` - [CSS](https://www.w3schools.com/css/default.asp) files that style the website.
-* `img` - Image files for the website.
 
 
 ## Running the Application
@@ -74,4 +73,4 @@ The app should now be displayed in the browser!
 
 ## Acknowledgments
 
-* [Google](https://www.google.com/)
+* [Google App Engine](https://cloud.google.com/appengine/)
