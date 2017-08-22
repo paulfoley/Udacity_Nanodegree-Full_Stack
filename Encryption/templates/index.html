@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Encrypt text using ROT13:</h2>
+<form method='post'>
+	<textarea name="text">
+		{{text}}
+	</textarea>
+	<br>
+	<input type='submit'>
+</form>
+{% endblock %}
