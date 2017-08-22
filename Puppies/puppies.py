@@ -23,6 +23,7 @@ def puppiesFunction():
   if request.method == 'GET':
     #Call the method to Get all of the puppies
     return getAllPuppies()
+
   elif request.method == 'POST':
     #Call the method to make a new puppy
     print("Making a New puppy")
