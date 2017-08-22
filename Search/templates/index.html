@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Search Wizardry</h1>
+  <form action="http://www.google.com/search" method="GET">
+    <label>Search term:
+      <input type="text" name="q">
+    </label>
+    <br>
+    <label>Corpus:
+      <select name="tbm">
+        <option selected value="">Regular</option>
+        <option value="isch">Images</option>
+        <option value="bks">Books</option>
+        <option value="nws">News</option>
+      </select>
+    </label>
+    <br>
+    <button type="submit">Go go!</button>
+  </form>
+{% endblock %}
