@@ -58,9 +58,9 @@ The instructions below assume that both [Vagrant](https://www.vagrantup.com/down
 * Check to make sure the `coders`, `programs`, and `bugs` tables have been created by running '\d' at the prompt.
 * Exit out of `psql` by typing ‘\q’
 
-### Run the Code
+### Run the Script
 
-* Run the python application by entering:
+* In the terminal enter:
 
 `python bug_management.py`
 
