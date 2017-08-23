@@ -18,11 +18,11 @@ You'll need to install:
 ### Files
 
 * `art.py` - [Python](https://www.python.org/) script that draws art.
-* `circle.py` - [Python](https://www.python.org/) script that draws art.
-* `flower.py` - [Python](https://www.python.org/) script that draws art.
-* `snake.py` - [Python](https://www.python.org/) script that draws art.
-* `square.py` - [Python](https://www.python.org/) script that draws art.
-* `triangle.py` - [Python](https://www.python.org/) script that draws art.
+* `circle.py` - [Python](https://www.python.org/) script that draws a circle.
+* `flower.py` - [Python](https://www.python.org/) script that draws a flower.
+* `snake.py` - [Python](https://www.python.org/) script that draws a snake.
+* `square.py` - [Python](https://www.python.org/) script that draws a square.
+* `triangle.py` - [Python](https://www.python.org/) script that draws a triangle.
 
 ## Authors
 
