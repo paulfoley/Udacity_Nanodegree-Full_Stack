@@ -1,6 +1,6 @@
 # Project - Chinook DB
 
-Performing [SQL](https://www.w3schools.com/sql/default.asp) functions on database is an important part of building web applications.
+Performing [SQL](https://www.w3schools.com/sql/default.asp) functions on a database is an important part of building web applications.
 
 
 ## Project Overview
