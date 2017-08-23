@@ -17,7 +17,7 @@ You'll need to install:
 
 ### Files
 
-* `take_break.py` - [Python](https://www.python.org/) script that messages us to take a break every 30 seconds.
+* `take_break.py` - [Python](https://www.python.org/) script that messages us to take a break every 30 minutes.
 
 
 ## Authors
