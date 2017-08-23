@@ -19,18 +19,26 @@ You'll need to install:
 ### Files
 
 * `employees.py` - [Python](https://www.python.org/) script that uses [SQLAlchemy](http://www.sqlalchemy.org/) to create, update, and read new employees in the [SQLite](https://www.sqlite.org/) database.
-* `database_setup.py` - [[Python](https://www.python.org/) script that uses [SQLAlchemy](http://www.sqlalchemy.org/) to create a [SQLite](https://www.sqlite.org/) database with the Employee and Adress tables.
+* `database_setup.py` - [Python](https://www.python.org/) script that uses [SQLAlchemy](http://www.sqlalchemy.org/) to create a [SQLite](https://www.sqlite.org/) database with the `Employee` and `Address` tables.
 
 
 ## Running the Application
 
-First we'll need to setup the [SQLite](https://www.sqlite.org/) database, to do that run the following command:
+To run the application follow the steps below.
 
-`python bug_management.py`
+### Setup Databae
 
-Next we will add users to the database, by running:
+* First, we'll need to setup the [SQLite3](https://www.sqlite.org/) database, to do that run the following command in the terminal:
+
+`python database_setup.py`
+
+### Run the Application
+
+* Next we will add users to the database, by running:
 
 `python employees.py`
+
+* A street address for an employee should be displayed.
 
 
 ## Authors
