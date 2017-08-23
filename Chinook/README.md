@@ -20,6 +20,7 @@ You'll need to install:
 ### Files
 
 * `queries.py` - [Python](https://www.python.org/) script that performs queries on a database.
+* `chinook.db` - [SQLite3](https://www.sqlite.org/) database.
 
 
 ## Running the Application
