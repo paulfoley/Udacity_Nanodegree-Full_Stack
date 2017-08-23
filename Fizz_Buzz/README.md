@@ -5,7 +5,7 @@ A very fun, but very hard game is [Fizz Buzz](https://en.wikipedia.org/wiki/Fizz
 
 ## Project Overview
 
-In this project, we will use [Google App Engine](https://cloud.google.com/appengine/) to create a simple Fizz Buzz](https://en.wikipedia.org/wiki/Fizz_buzz) simulator that allows us to have the answer key for playing the game.
+In this project, we will create a simple [Fizz Buzz](https://en.wikipedia.org/wiki/Fizz_buzz) simulator that allows us to have the answer key for playing the game. We will use [Google App Engine](https://cloud.google.com/appengine/) to deploy and host our application.
 
 
 ## Getting Started
