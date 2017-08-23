@@ -80,17 +80,17 @@ class Signup(BaseHandler):
         if have_error:
             self.render('signup-form.html', **params)
         else:
-            self.redirect('/unit2/welcome?username=' + username)
+            self.redirect('/welcome?username=' + username)
 
 class Welcome(BaseHandler):
     def get(self):
         username = self.request.get('username')
         if valid_username(username):
-            self.render('welcome.html', username = username)
+            self.render('index.html', username = username)
         else:
-            self.redirect('/unit2/signup')
+            self.redirect('/signup')
 
-app = webapp2.WSGIApplication([('/unit2/rot13', Rot13),
-                               ('/unit2/signup', Signup),
-                               ('/unit2/welcome', Welcome)],
+app = webapp2.WSGIApplication([('/rot13', Rot13),
+                               ('/signup', Signup),
+                               ('/', Welcome)],
                               debug=True)
