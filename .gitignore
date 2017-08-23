@@ -1,6 +1,5 @@
-Logs_Analysis/database_setup.sql
-Logs_Analysis/ubuntu-xenial-16.04-cloudimg-console.log
 Favorite_Movies/__pycache__/
+Restaurant_Search-API/__pycache__/
 Bookmark_Server/__pycache__/
 Employees/__pycache__/
 Links/__pycache__/
@@ -22,3 +21,5 @@ Personal_Website/personal.pyc
 Resume/resume.pyc
 Encryption/encryption.pyc
 Shopping_List/shopping_list.pyc
+Logs_Analysis/database_setup.sql
+Logs_Analysis/ubuntu-xenial-16.04-cloudimg-console.log
