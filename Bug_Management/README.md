@@ -53,10 +53,14 @@ The instructions below assume that both [Vagrant](https://www.vagrantup.com/down
 ### Setup Database
 
 * Navigate to the directory that holds the `database_setup.sql` file.
-* Type `psql` into the terminal
-* Type '\i database_setup.sql' to create and connect to the `development` database.
-* Check to make sure the `coders`, `programs`, and `bugs` tables have been created by running '\d' at the prompt.
-* Exit out of `psql` by typing ‘\q’
+* Enter the PostgreSQL database, by typing the following into the terminal:
+`psql`
+* Create and connect to the `development` database, by entering:
+`\i database_setup.sql`
+* Check to make sure the `coders`, `programs`, and `bugs` tables have been created by entering:
+`\d`
+* Exit out of `psql` by entering:
+`\q`
 
 ### Run the Script
 
