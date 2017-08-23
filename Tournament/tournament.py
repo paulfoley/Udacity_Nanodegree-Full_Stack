@@ -1,10 +1,13 @@
-##  Implementation of a Swiss-system tournament
+'''Implementation of a Swiss-system tournament'''
 
-# Import database
+# Imports
 import psycopg2
 
 def connect():
-    """Connect to the PostgreSQL database.  Returns a database connection and cursor."""
+    """ 
+    Connect to the PostgreSQL database.
+    Returns a database connection and cursor.
+    """
     try:
         connection = psycopg2.connect("dbname={}".format('tournament'))
         cursor = connection.cursor()
@@ -16,7 +19,7 @@ def deleteMatches():
     """Remove all the match records from the database."""
     connection, cursor = connect()
 
-    query = "DELETE FROM Matches;"
+    query = "DELETE FROM matches;"
     cursor.execute(query)
     connection.commit()
     connection.close()
@@ -25,7 +28,7 @@ def deletePlayers():
     """Remove all the player records from the database."""
     connection, cursor = connect()
 
-    query = "DELETE FROM Players;"
+    query = "DELETE FROM players;"
     cursor.execute(query)
     connection.commit()
     connection.close()
@@ -34,7 +37,7 @@ def countPlayers():
     """Returns the number of players currently registered."""
     connection, cursor = connect()
 
-    query = "SELECT count(Id) as Num FROM Players;"
+    query = "SELECT count(id) as num FROM players;"
     cursor.execute(query)
     results = cursor.fetchone()
     results = int(results[0])
@@ -42,7 +45,8 @@ def countPlayers():
     return results
 
 def registerPlayer(name):
-    """Adds a player to the tournament database.
+    """
+    Adds a player to the tournament database.
   
     The database assigns a unique serial id number for the player.  (This
     should be handled by your SQL database schema, not in your Python code.)
@@ -52,7 +56,7 @@ def registerPlayer(name):
     """
     connection, cursor = connect()
 
-    query = "INSERT INTO Players (Name) VALUES (%s);"
+    query = "INSERT INTO players (name) VALUES (%s);"
     cursor.execute(query, (name,))
     connection.commit()
     connection.close()
@@ -73,17 +77,17 @@ def playerStandings():
     """
     connection, cursor = connect()
 
-    query_matches = """SELECT Players.Id AS id, 
-                        Players.Name AS name, 
-                        view_wins.wins AS wins, 
-                        view_played.played AS matches 
-                        FROM players, view_wins, view_played 
-                        WHERE players.Id = view_wins.id AND players.Id = view_played.id 
-                        ORDER BY wins DESC;"""
+    query_matches = """
+                    SELECT players.id AS id, players.name AS name, view_wins.wins AS wins, view_played.played AS matches 
+                    FROM players, view_wins, view_played 
+                    WHERE players.Id = view_wins.id AND players.Id = view_played.id 
+                    ORDER BY wins DESC;
+                    """
     cursor.execute(query_matches)
     standings = cursor.fetchall()
 
     connection.close()
+    
     return standings
 
 
@@ -96,7 +100,7 @@ def reportMatch(winner, loser):
     """
     connection, cursor = connect()
     
-    query = "INSERT INTO Matches (Winner, Loser) VALUES (%s, %s);"
+    query = "INSERT INTO matches (winner, loser) VALUES (%s, %s);"
     cursor.execute(query, (winner,loser,))
     connection.commit()
     connection.close() 
