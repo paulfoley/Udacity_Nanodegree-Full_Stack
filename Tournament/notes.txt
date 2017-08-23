@@ -1,5 +1,0 @@
-drop table sometable;
-
-delete from sometable;
-
-Remember 'serial' Type and use views
