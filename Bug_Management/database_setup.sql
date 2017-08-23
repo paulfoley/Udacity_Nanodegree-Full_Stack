@@ -1,10 +1,10 @@
-## SQL Commands to setup 'development' database, with 'Coders', 'Programs' and 'Bugs' tables
+-- SQL Commands to setup 'development' database, with 'Coders', 'Programs' and 'Bugs' tables
 -- Create Database
 DROP DATABASE IF EXISTS development;
 CREATE DATABASE development;
 \c development
 
--- Coders
+-- Coder Table
 CREATE TABLE Coders (
 	id serial PRIMARY KEY NOT NULL,
 	name text,
