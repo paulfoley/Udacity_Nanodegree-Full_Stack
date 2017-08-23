@@ -1,11 +1,11 @@
-# Project - Blog
+# Project - Signup
 
-[Blogging](https://en.wikipedia.org/wiki/Blog) is one of the most common activities on the web!
+One of the most common features on a web application is a sign up form.
 
 
 ## Project Overview
 
-In this project, we will create a simple blog that allows a user to enter a subject and blog post, store the post, and display the blog. We'll deploy and host our blog using use [Google App Engine](https://cloud.google.com/appengine/).
+In this project, we will create a simple signup form that takes in an username, password, and email. We'll deploy and host our blog using use [Google App Engine](https://cloud.google.com/appengine/).
 
 
 ## Getting Started
@@ -19,11 +19,11 @@ You'll need to install:
 
 ### Files
 
-* `blog.py` - [Python](https://www.python.org/) script that creates functionality to create and display a blog.
+* `signup.py` - [Python](https://www.python.org/) script that creates functionality of signup form.
 * `app.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
-* `templates` - [HTML5](https://www.w3schools.com/html/) files that display the blog.
+* `index.yaml` - [Google App Engine](https://cloud.google.com/appengine/) environment file.
+* `templates` - [HTML5](https://www.w3schools.com/html/) files that display the signup form.
 * `stylesheets` - [CSS](https://www.w3schools.com/html/html_css.asp) files for styling.
-* `img` - Images for blog.
 
 
 

@@ -8,7 +8,7 @@ handlers:
 - url: /stylesheets
   static_dir: stylesheets
 - url: /.*
-  script: sign_in.app
+  script: signup.app
 
 libraries:
 - name: jinja2
