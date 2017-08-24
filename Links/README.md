@@ -24,13 +24,21 @@ You'll need to install:
 
 ## Running the Application
 
-To get started the links database needs to be created by running:
+To run the application follow the steps below.
+
+### Setup Databae
+
+* First, we'll need to setup the [SQLite3](https://www.sqlite.org/) database, to do that run the following command in the terminal:
 
 `python database_setup.py`
 
-After this script runs you should see `link.db` created in the folder. Next run the queries with:
+### Run the Application
 
-`python queries.py`
+* Next we will query the database, by running:
+
+`python links.py`
+
+Our queries will be output to the terminal.
 
 
 ## Authors
