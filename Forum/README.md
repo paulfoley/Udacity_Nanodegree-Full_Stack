@@ -26,27 +26,60 @@ You'll need to install:
 
 ## Running the Application
 
-This application uses [Vagrant](https://www.vagrantup.com/downloads.html) and [Virtual Box](https://www.virtualbox.org/) to create a virtual environment. We will need both of these programs to run the script. Setup and download instructions can be found on their various sites.
+To run the application follow the steps below.
+
+### Setup Virtual Environment
+
+We will use [Vagrant](https://www.vagrantup.com/downloads.html) and [Virtual Box](https://www.virtualbox.org/) to create a virtual environment. Setup and download instructions can be found on their various sites.
 
 The instructions below assume that both [Vagrant](https://www.vagrantup.com/downloads.html) and [Virtual Box](https://www.virtualbox.org/) are setup.
 
-### Run the Application
-
-To run the application we'll first need to spin up the virtual environment. Navigate to the folder containing the `Vagrantfile` in your terminal, and run the command:
+* First spin up the virtual environment. Navigate to the folder containing the `Vagrantfile` in your terminal, and run the command:
 
 `vagrant up`
 
-If this is your first time running the command the virtual environment will begin setup, this can take some time. Once the virtual environment is setup, run the command:
+* If this is your first time running the command the virtual environment will begin setup, this can take some time. 
+
+* Once the virtual environment is setup, run the command:
 
 `vagrant ssh`
 
-This will log you into the virtual environment. Navigate to the folder that contains the `forum.py` script:
+* This will log you into the virtual environment. 
+
+* Navigate to the folder that contains the project files:
 
 `cd /vagrant`
 
-Now you can run the python application:
+### Setup Database
+
+* Navigate to the directory that holds the `database_setup.sql` file.
+* Enter the PostgreSQL database, by typing the following into the terminal:
+
+`psql`
+
+* Create and connect to the `forum` database, by entering:
+
+`\i database_setup.sql`
+
+* Check to make sure the `posts` tables have been created by entering:
+
+`\d`
+
+* Exit out of `psql` by entering:
+
+`\q`
+
+### Run the Script
+
+* In the terminal enter:
 
 `python forum.py`
+
+* In a web browser navigate to:
+
+`http://localhost:8000/`
+
+* A forum web application will be displayed.
 
 
 ## Authors
@@ -66,4 +99,5 @@ Now you can run the python application:
 
 ## Acknowledgments
 
-* [Udacity](https://www.udacity.com/)
+* [Vagrant](https://www.vagrantup.com/downloads.html)
+* [Virtual Box](https://www.virtualbox.org/)
