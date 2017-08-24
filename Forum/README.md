@@ -32,9 +32,9 @@ To run the application follow the steps below.
 
 We will use [Vagrant](https://www.vagrantup.com/downloads.html) and [Virtual Box](https://www.virtualbox.org/) to create a virtual environment. Setup and download instructions can be found on their various sites.
 
-The instructions below assume that both [Vagrant](https://www.vagrantup.com/downloads.html) and [Virtual Box](https://www.virtualbox.org/) are setup.
+The instructions below assume that both [Vagrant](https://www.vagrantup.com/downloads.html) and [Virtual Box](https://www.virtualbox.org/) are setup. First we'll need to spin up the virtual environment. 
 
-* First spin up the virtual environment. Navigate to the folder containing the `Vagrantfile` in your terminal, and run the command:
+* Navigate to the folder containing the `Vagrantfile` in your terminal, and run the command:
 
 `vagrant up`
 
