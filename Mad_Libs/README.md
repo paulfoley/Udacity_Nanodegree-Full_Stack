@@ -1,11 +1,11 @@
 # Project - Mad Libs
 
-Games are one of the most common use cases of web applications and programming in general..
+Games are one of the most common applications on the web.
 
 
 ## Project Overview
 
-In this project, we'll build an [Mad Libs](http://www.madlibs.com/) game that will have a user input nouns, verbs, and adjectives then output a funny sentence using their inputs.
+In this project, we'll build a [Mad Libs](http://www.madlibs.com/) game that will have a user input nouns, verbs, and adjectives then output a funny sentence using their inputs.
 
 
 ## Getting Started
