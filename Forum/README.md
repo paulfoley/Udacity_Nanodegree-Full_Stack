@@ -38,13 +38,13 @@ The instructions below assume that both [Vagrant](https://www.vagrantup.com/down
 
 `vagrant up`
 
-* If this is your first time running the command the virtual environment will begin setup, this can take some time. 
+If this is your first time running the command the virtual environment will begin setup, this can take some time. 
 
 * Once the virtual environment is setup, run the command:
 
 `vagrant ssh`
 
-* This will log you into the virtual environment. 
+This will log you into the virtual environment. 
 
 * Navigate to the folder that contains the project files:
 
@@ -52,7 +52,8 @@ The instructions below assume that both [Vagrant](https://www.vagrantup.com/down
 
 ### Setup Database
 
-* Navigate to the directory that holds the `database_setup.sql` file.
+Make sure you're in the directory that holds the `database_setup.sql` file.
+
 * Enter the PostgreSQL database, by typing the following into the terminal:
 
 `psql`
@@ -79,7 +80,7 @@ The instructions below assume that both [Vagrant](https://www.vagrantup.com/down
 
 `http://localhost:8000/`
 
-* A forum web application will be displayed.
+A forum web application will be displayed.
 
 
 ## Authors
